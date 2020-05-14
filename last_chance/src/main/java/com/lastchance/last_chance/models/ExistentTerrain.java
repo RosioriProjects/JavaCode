@@ -5,7 +5,7 @@ import javax.persistence.Table;
 
 @Entity(name = "existent_terrain")
 @Table(name = "existent_table")
-public class Existent_Terrain extends GameObject {
+public class ExistentTerrain extends GameObject {
 
     private Integer id_terrain;
     private Integer hits_remaining;

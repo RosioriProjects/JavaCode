@@ -5,7 +5,7 @@ import javax.persistence.Table;
 
 @Entity(name = "existent_items")
 @Table (name = "existent_items")
-public class Existent_Items extends GameObject {
+public class ExistentItems extends GameObject {
 
 
     private Integer id_item;

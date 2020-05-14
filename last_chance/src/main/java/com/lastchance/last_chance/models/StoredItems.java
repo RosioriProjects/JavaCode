@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 @Entity (name = "stored_items")
 @Table (name = "stored_items")
-public class Stored_Items {
+public class StoredItems {
 
     @Id
     private Integer id_instance;
