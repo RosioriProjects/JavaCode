@@ -2,8 +2,11 @@ package com.lastchance.last_chance.models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 
 @Entity(name = "game_object")
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class GameObject {
     @Id
     protected Integer id_instance;
