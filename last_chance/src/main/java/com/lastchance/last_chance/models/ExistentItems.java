@@ -1,16 +1,21 @@
 package com.lastchance.last_chance.models;
 
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Entity(name = "existent_items")
-@Table (name = "existent_items")
 public class ExistentItems extends GameObject {
 
 
     private Integer id_item;
     private Integer quantity;
 
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+   }
 
     public Integer getId_item() {
         return id_item;
@@ -20,12 +25,6 @@ public class ExistentItems extends GameObject {
         this.id_item = id_item;
     }
 
-    public Integer getQuantity() {
-        return quantity;
-    }
 
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
 
 }

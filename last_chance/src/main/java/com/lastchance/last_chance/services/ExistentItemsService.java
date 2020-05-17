@@ -17,11 +17,14 @@ public class ExistentItemsService {
     }
 
     public ArrayList<ExistentItems> getAllExistent_Items(){
+
         return new ArrayList<>(existent_ItemsRepository.findAll());
     }
 
     public ExistentItems addExistent_Item(ExistentItems existent_item){
         return existent_ItemsRepository.save(existent_item);
     }
+
+
 
 }
