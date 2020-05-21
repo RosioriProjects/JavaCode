@@ -1,8 +1,10 @@
 package com.lastchance.last_chance.controllers;
 
+import com.lastchance.last_chance.dtos.LoginRequest;
 import com.lastchance.last_chance.models.User;
 import com.lastchance.last_chance.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,5 +28,10 @@ public class UserController {
     @PostMapping("add")
     public User addUser(@RequestBody User user){
         return userService.addUser(user);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<Object> login(@RequestBody LoginRequest request){
+        return userService.login(request);
     }
 }

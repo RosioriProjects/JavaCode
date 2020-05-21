@@ -2,10 +2,9 @@ package com.lastchance.last_chance.models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity(name = "user")
-@Table(name = "user")
+
 public class User {
     @Id
     private Integer id_user ;
