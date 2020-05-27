@@ -22,4 +22,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     @Modifying
     @Query("update user u set u.longitude=?1, u.latitude=?2 where u.username=?3")
     void setUserCoordById(Integer longitude, Integer latitude, String username);
+
+    @Override
+    <S extends User> S save(S s);
 }

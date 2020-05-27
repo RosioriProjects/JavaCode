@@ -2,6 +2,7 @@ package com.lastchance.last_chance.controllers;
 
 import com.lastchance.last_chance.dtos.LoginRequest;
 import com.lastchance.last_chance.dtos.LogoutRequest;
+import com.lastchance.last_chance.dtos.RegisterRequest;
 import com.lastchance.last_chance.models.User;
 import com.lastchance.last_chance.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,8 +38,8 @@ public class UserController {
     }
 
     @PostMapping("/logout")
-    public  ResponseEntity<Object> logout(@RequestBody LogoutRequest request){
+    public  ResponseEntity<Object> logout(@RequestBody LogoutRequest request){ return userService.logout(request); }
 
-        return userService.logout(request);
-    }
+    @PostMapping("/register")
+    public  ResponseEntity<Object> register(@RequestBody RegisterRequest request){ return userService.register(request); }
 }

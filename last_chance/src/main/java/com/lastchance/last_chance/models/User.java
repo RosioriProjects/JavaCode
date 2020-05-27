@@ -1,12 +1,14 @@
 package com.lastchance.last_chance.models;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity(name = "user")
 
 public class User {
-    @Id
+    @Id @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id_user;
     private String username;
     private String password;
@@ -14,6 +16,7 @@ public class User {
     private Integer hp;
     private Integer armor;
     private Integer speed;
+
     private Integer attack_value;
     private Integer hunger;
     private Integer sickness;
