@@ -6,7 +6,7 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Entity (name = "maps")
-@Table (name = "maps")
+
 public class Maps {
     @Id
     private Integer id_map;

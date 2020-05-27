@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 public class User {
     @Id
-    private Integer id_user ;
+    private Integer id_user;
     private String username;
     private String password;
     private String nickname;

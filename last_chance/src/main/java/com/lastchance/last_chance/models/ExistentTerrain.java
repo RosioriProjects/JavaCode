@@ -3,8 +3,8 @@ package com.lastchance.last_chance.models;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "existent_terrain")
+@Entity(name = "existent_terrain")
+
 public class ExistentTerrain extends GameObject {
 
     private Integer id_terrain;

@@ -1,6 +1,7 @@
 package com.lastchance.last_chance.services;
 
 import com.lastchance.last_chance.dtos.LoginRequest;
+import com.lastchance.last_chance.dtos.LogoutRequest;
 import com.lastchance.last_chance.models.User;
 import com.lastchance.last_chance.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,19 @@ public class UserService {
     @Autowired
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
+    }
+
+    public ResponseEntity<Object> logout(LogoutRequest user){
+        String username=user.getUsername();
+        int longitude=user.getLongitude();
+        int latitude=user.getLatitude();
+        Optional<User> existingUser=userRepository.findByUsername(username);
+
+        if(existingUser.isPresent()){
+            userRepository.setUserCoordById(longitude,latitude,username);
+            return new ResponseEntity<>(existingUser.get(),HttpStatus.OK);
+        }
+        return new ResponseEntity<>( HttpStatus.NOT_FOUND);
     }
 
     public ResponseEntity<Object> login(LoginRequest user) {

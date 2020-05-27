@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity (name = "inventory")
-@Table (name = "inventory")
+
 public class Inventory {
     @Id
     private Integer id_instance;
